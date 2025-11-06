@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <meta name="description" content="Resume of Md. Azim Mahabub - Web Instructor, Python Programmer, IT Support Specialist in Dhaka, Bangladesh. Explore experience, skills, projects, videos, YouTube channel, and certifications."/>
+ <title>Resume of Md. Azim Mahabub</title>
+ <!-- Bootstrap 5 -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+ <!-- AOS Animation -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <style>
+ :root {
+   --primary: #1a1a1a;
+   --secondary: #003366;
+   --accent: #00aaff;
+   --light: #f8f9fa;
+   --gray: #e9ecef;
+   --border: #ddd;
+   --text: #1a1a1a;
+   --bg: #ffffff;
+   --sidebar-bg: #f8f9fa;
+   --navbar-bg: #ffffff;
+ }
+ [data-theme="dark"] {
+   --primary: #f8f9fa;
+   --secondary: #00aaff;
+   --accent: #00ccff;
+   --light: #1a1a1a;
+   --gray: #2c3e50;
+   --border: #444;
+   --text: #f8f9fa;
+   --bg: #121212;
+   --sidebar-bg: #1e1e1e;
+   --navbar-bg: #003366;
+ }
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ body {
+   font-family: 'Poppins', sans-serif;
+   background-color: var(--bg);
+   color: var(--text);
+   transition: all 0.4s ease;
+   line-height: 1.6;
+   overflow-x: hidden;
+   padding-top: 80px; /* Fixed navbar height */
+ }
+ /* Navbar */
+ .navbar {
+   background-color: var(--navbar-bg) !important;
+   padding: 1rem 0;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+   transition: all 0.3s ease;
+   height: 80px;
+ }
+ .navbar-brand {
+   font-weight: 700;
+   font-size: 1.6rem;
+   color: var(--secondary) !important;
+ }
+ .nav-link {
+   color: var(--secondary) !important;
+   font-weight: 500;
+   margin: 0 12px;
+   position: relative;
+   transition: 0.3s;
+ }
+ .nav-link:focus {
+   outline: 2px solid var(--accent);
+   border-radius: 4px;
+ }
+ .nav-link::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 3px;
+   bottom: -6px;
+   left: 50%;
+   background-color: var(--accent);
+   transition: 0.4s ease;
+ }
+ .nav-link:hover::after {
+   width: 100%;
+   left: 0;
+ }
+ .theme-toggle {
+   background: none;
+   border: 2px solid var(--accent);
+   color: var(--accent);
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   font-size: 1.2rem;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+ .theme-toggle:hover {
+   background: var(--accent);
+   color: white;
+   transform: rotate(360deg);
+ }
+ /* Hero */
+ .hero {
+   background: linear-gradient(rgba(0,51,102,0.95), rgba(0,51,102,0.95)), url('https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+   color: white;
+   padding: 80px 0 60px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+ }
+ .hero::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: radial-gradient(circle, rgba(0,170,255,0.2) 0%, transparent 70%);
+   animation: pulse 4s infinite;
+ }
+ @keyframes pulse {
+   0%, 100% { opacity: 0.3; }
+   50% { opacity: 0.6; }
+ }
+ .profile-img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 6px solid white;
+   object-fit: cover;
+   box-shadow: 0 0 30px rgba(255,255,255,0.5);
+   transition: 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+ }
+ .profile-img:hover {
+   transform: scale(1.12) rotate(5deg);
+   box-shadow: 0 0 40px rgba(0,170,255,0.7);
+ }
+ .hero h1 {
+   font-size: clamp(1.8rem, 5vw, 2.8rem);
+   font-weight: 700;
+   margin: 20px 0;
+   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+ }
+ .hero .lead {
+   font-size: 1.2rem;
+   opacity: 0.95;
+   max-width: 600px;
+   margin: 0 auto 25px;
+ }
+ .btn-custom {
+   background: var(--accent);
+   color: white;
+   padding: 12px 30px;
+   border-radius: 50px;
+   font-weight: 600;
+   transition: 0.4s ease;
+   box-shadow: 0 5px 15px rgba(0,170,255,0.4);
+ }
+ .btn-custom:hover {
+   background: #0088cc;
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,136,204,0.5);
+ }
+ /* CV Layout */
+ .cv-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 50px 15px;
+ }
+ .cv-sidebar {
+   background: var(--sidebar-bg);
+   padding: 35px;
+   border-radius: 18px;
+   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+   height: fit-content;
+   transition: 0.4s ease;
+ }
+ .cv-sidebar:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+ }
+ .cv-sidebar h5 {
+   color: var(--secondary);
+   font-weight: 600;
+   margin-bottom: 18px;
+   border-bottom: 3px solid var(--accent);
+   padding-bottom: 10px;
+   font-size: 1.15rem;
+   position: relative;
+ }
+ .cv-sidebar h5::before {
+   content: '';
+   position: absolute;
+   bottom: -3px;
+   left: 0;
+   width: 30px;
+   height: 3px;
+   background: var(--accent);
+   border-radius: 2px;
+ }
+ .cv-sidebar ul {
+   list-style: none;
+   padding-left: 0;
+ }
+ .cv-sidebar ul li {
+   margin-bottom: 12px;
+   font-size: 0.98rem;
+   display: flex;
+   align-items: center;
+ }
+ .cv-sidebar i {
+   color: var(--accent);
+   width: 22px;
+   margin-right: 12px;
+   font-size: 1.15rem;
+ }
+ .cv-sidebar a {
+   color: var(--text);
+   text-decoration: none;
+   transition: 0.3s;
+ }
+ .cv-sidebar a:hover {
+   color: var(--accent);
+   text-decoration: underline;
+ }
+ /* Skills Progress Bars */
+ .skill-progress {
+   margin-top: 5px;
+ }
+ .progress {
+   height: 6px;
+   background-color: var(--gray);
+   border-radius: 3px;
+   overflow: hidden;
+ }
+ .progress-bar {
+   background-color: var(--accent);
+   transition: width 1.5s ease-in-out;
+   border-radius: 3px;
+ }
+ .progress-label {
+   font-size: 0.85rem;
+   margin-top: 2px;
+   color: var(--secondary);
+   font-weight: 500;
+ }
+ /* Main Content */
+ .cv-main {
+   padding: 35px;
+ }
+ .cv-main h3 {
+   color: var(--secondary);
+   font-weight: 700;
+   margin-bottom: 25px;
+   position: relative;
+   display: inline-block;
+   font-size: clamp(1.2rem, 4vw, 1.5rem);
+ }
+ .cv-main h3::after {
+   content: '';
+   position: absolute;
+   bottom: -10px;
+   left: 0;
+   width: 70px;
+   height: 5px;
+   background: var(--accent);
+   border-radius: 3px;
+ }
+ .exp-item {
+   margin-bottom: 35px;
+   padding-bottom: 25px;
+   border-bottom: 1px dashed var(--border);
+ }
+ .exp-item:last-child {
+   border-bottom: none;
+   padding-bottom: 0;
+   margin-bottom: 0;
+ }
+ .exp-title {
+   font-weight: 600;
+   color: var(--primary);
+   font-size: 1.15rem;
+   margin-bottom: 5px;
+ }
+ .exp-date {
+   font-size: 0.95rem;
+   color: var(--secondary);
+   margin-bottom: 10px;
+   font-weight: 500;
+ }
+ .exp-item ul {
+   margin-top: 12px;
+   padding-left: 22px;
+ }
+ .exp-item ul li {
+   margin-bottom: 6px;
+   font-size: 0.96rem;
+   position: relative;
+ }
+ .exp-item ul li::before {
+   content: '→';
+   color: var(--accent);
+   position: absolute;
+   left: -18px;
+   font-weight: bold;
+ }
+ /* Projects */
+ .project-item {
+   margin-bottom: 30px;
+   padding: 20px;
+   border: 1px solid var(--border);
+   border-radius: 10px;
+   background: var(--light);
+   transition: 0.3s;
+ }
+ .project-item:hover {
+   box-shadow: 0 5px 15px rgba(0,170,255,0.2);
+   border-color: var(--accent);
+ }
+ .project-title {
+   font-weight: 600;
+   color: var(--secondary);
+   font-size: 1.1rem;
+   margin-bottom: 8px;
+ }
+ .project-desc {
+   font-size: 0.95rem;
+   color: var(--text);
+   margin-bottom: 10px;
+ }
+ .project-links {
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+ }
+ .project-links a {
+   color: var(--accent);
+   text-decoration: none;
+   font-size: 0.9rem;
+ }
+ .project-links a:hover {
+   text-decoration: underline;
+ }
+ /* Videos Section */
+ .video-item {
+   margin-bottom: 30px;
+   padding: 20px;
+   border: 1px solid var(--border);
+   border-radius: 10px;
+   background: var(--light);
+   transition: 0.3s;
+   text-align: center;
+ }
+ .video-item:hover {
+   box-shadow: 0 5px 15px rgba(0,170,255,0.2);
+   border-color: var(--accent);
+ }
+ .video-title {
+   font-weight: 600;
+   color: var(--secondary);
+   font-size: 1.1rem;
+   margin-bottom: 8px;
+ }
+ .video-desc {
+   font-size: 0.95rem;
+   color: var(--text);
+   margin-bottom: 10px;
+ }
+ .video-embed {
+   position: relative;
+   padding-bottom: 56.25%; /* 16:9 aspect ratio */
+   height: 0;
+   overflow: hidden;
+   border-radius: 8px;
+   margin-bottom: 10px;
+ }
+ .video-embed iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: none;
+ }
+ .video-links a {
+   color: var(--accent);
+   text-decoration: none;
+   font-size: 0.9rem;
+   margin: 0 5px;
+ }
+ .video-links a:hover {
+   text-decoration: underline;
+ }
+ /* YouTube Channel Section */
+ .youtube-item {
+   margin-bottom: 30px;
+   padding: 20px;
+   border: 1px solid var(--border);
+   border-radius: 10px;
+   background: var(--light);
+   transition: 0.3s;
+   text-align: center;
+ }
+ .youtube-item:hover {
+   box-shadow: 0 5px 15px rgba(0,170,255,0.2);
+   border-color: var(--accent);
+ }
+ .youtube-title {
+   font-weight: 600;
+   color: var(--secondary);
+   font-size: 1.1rem;
+   margin-bottom: 8px;
+ }
+ .youtube-desc {
+   font-size: 0.95rem;
+   color: var(--text);
+   margin-bottom: 10px;
+ }
+ .youtube-embed {
+   position: relative;
+   padding-bottom: 56.25%; /* 16:9 aspect ratio */
+   height: 0;
+   overflow: hidden;
+   border-radius: 8px;
+   margin-bottom: 10px;
+ }
+ .youtube-embed iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: none;
+ }
+ .youtube-links a {
+   color: var(--accent);
+   text-decoration: none;
+   font-size: 0.9rem;
+   margin: 0 5px;
+ }
+ .youtube-links a:hover {
+   text-decoration: underline;
+ }
+ /* Certifications */
+ .cert-img {
+   max-height: 480px;
+   border: 3px solid var(--border);
+   border-radius: 15px;
+   cursor: pointer;
+   transition: 0.5s ease;
+   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+   width: 100%;
+   height: auto;
+ }
+ .cert-img:hover {
+   border-color: var(--accent);
+   transform: scale(1.05) translateY(-10px);
+   box-shadow: 0 20px 40px rgba(0,170,255,0.3);
+ }
+ /* WhatsApp */
+ .whatsapp-btn {
+   position: fixed;
+   bottom: 25px;
+   right: 25px;
+   background: #25D366;
+   color: white;
+   width: 65px;
+   height: 65px;
+   border-radius: 50%;
+   font-size: 1.9rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 8px 20px rgba(37,211,102,0.5);
+   z-index: 1000;
+   transition: 0.4s ease;
+   text-decoration: none;
+ }
+ .whatsapp-btn:hover {
+   transform: scale(1.2) rotate(15deg);
+   background: #128C7E;
+   color: white;
+ }
+ /* Back to Top Button */
+ .back-to-top {
+   position: fixed;
+   bottom: 90px;
+   right: 25px;
+   background: var(--accent);
+   color: white;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   font-size: 1.2rem;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 4px 12px rgba(0,170,255,0.3);
+   z-index: 999;
+   transition: 0.3s ease;
+   text-decoration: none;
+   opacity: 0;
+ }
+ .back-to-top.show {
+   display: flex;
+   opacity: 1;
+ }
+ .back-to-top:hover {
+   background: #0088cc;
+   transform: translateY(-3px);
+ }
+ footer {
+   background: var(--primary);
+   color: white;
+   padding: 35px 0;
+   margin-top: 60px;
+   font-size: 0.95rem;
+ }
+ /* Loading Spinner for PDF */
+ #pdfLoading {
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 2000;
+   background: rgba(0,0,0,0.8);
+   color: white;
+   padding: 20px;
+   border-radius: 10px;
+ }
+ .spinner {
+   border: 4px solid #f3f3f3;
+   border-top: 4px solid var(--accent);
+   border-radius: 50%;
+   width: 30px;
+   height: 30px;
+   animation: spin 1s linear infinite;
+   margin: 0 auto 10px;
+ }
+ @keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+ }
+ /* Responsive Enhancements */
+ .cv-sidebar {
+   margin-bottom: 2rem;
+ }
+ .exp-item ul {
+   padding-left: 1.5rem;
+ }
+ .project-links, .video-links, .youtube-links {
+   justify-content: flex-start;
+ }
+ /* Extra small devices (phones, 576px and down) */
+ @media (max-width: 576px) {
+   body { padding-top: 70px; }
+   .navbar { height: 70px; padding: 0.5rem 0; }
+   .hero { padding: 60px 0 40px; }
+   .hero h1 { font-size: 1.8rem; }
+   .profile-img { width: 120px; height: 120px; }
+   .cv-container { padding: 30px 10px; }
+   .cv-sidebar, .cv-main { padding: 20px; }
+   .cv-main h3 { font-size: 1.2rem; }
+   .exp-item ul li::before { left: -22px; }
+   .project-links, .video-links, .youtube-links { flex-direction: column; gap: 5px; }
+   .cert-img { max-height: 300px; margin-bottom: 1rem; }
+   .whatsapp-btn { bottom: 15px; right: 15px; width: 55px; height: 55px; font-size: 1.5rem; }
+   .back-to-top { bottom: 80px; right: 15px; width: 45px; height: 45px; font-size: 1rem; }
+   .video-embed, .youtube-embed { padding-bottom: 75%; }
+ }
+ /* Small devices (landscape phones, 768px and up) */
+ @media (min-width: 768px) and (max-width: 991px) {
+   .hero h1 { font-size: 2.2rem; }
+   .profile-img { width: 130px; height: 130px; }
+   .cv-sidebar { margin-bottom: 2rem; }
+ }
+ /* Medium devices (tablets, 992px and up) */
+ @media (min-width: 992px) {
+   .cv-sidebar { height: fit-content; margin-bottom: 0; }
+ }
+ /* Large devices (desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+   .hero h1 { font-size: 2.8rem; }
+ }
+ /* QR Code Hidden Container */
+ #qrContainer {
+   position: absolute;
+   left: -9999px;
+   top: 0;
+ }
+ </style>
+</head>
+<body data-theme="light">
+ <!-- QR Code Hidden Container -->
+ <div id="qrContainer">
+  <canvas id="qrCanvas"></canvas>
+ </div>
+ <!-- PDF Loading Spinner -->
+ <div id="pdfLoading">
+  <div class="spinner"></div>
+  <p>Generating PDF... Please wait.</p>
+ </div>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+   <a class="navbar-brand" href="#">AZIM MAHABUB</a>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ms-auto align-items-center">
+     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+     <li class="nav-item"><a class="nav-link" href="#cv">Resume</a></li>
+     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+     <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+     <li class="nav-item"><a class="nav-link" href="#youtube">YouTube</a></li>
+     <li class="nav-item"><a class="nav-link" href="#certs">Certificates</a></li>
+     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+     <li class="nav-item">
+      <button class="theme-toggle ms-3" id="themeToggle" aria-label="Toggle Dark Mode">
+       <i class="fas fa-moon"></i>
+      </button>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+ <!-- Back to Top Button -->
+ <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to Top">
+  <i class="fas fa-arrow-up"></i>
+ </a>
+ <!-- Hero -->
+ <section id="home" class="hero">
+  <div class="container" data-aos="fade-up">
+   <img id="profileImage" src="https://i.ibb.co/QFMhYsXx/IMG-20250601-WA0011.jpg" alt="Professional photo of Md. Azim Mahabub, Web Instructor from Dhaka" class="profile-img mb-4" onerror="this.src='https://via.placeholder.com/150?text=Profile'">
+   <h1 data-aos="fade-up" data-aos-delay="200">RESUME OF MD AZIM MAHABUB</h1>
+   <p class="lead" data-aos="fade-up" data-aos-delay="400">Web Instructor | Python Programmer | IT Support Specialist</p>
+   <div data-aos="fade-up" data-aos-delay="600">
+    <a href="#contact" class="btn btn-custom me-3">Hire Me</a>
+    <button id="downloadPdfBtn" class="btn btn-outline-light">Download PDF</button>
+   </div>
+  </div>
+ </section>
+ <!-- CV Section -->
+ <section id="cv" class="py-5">
+  <div class="cv-container">
+   <div class="row">
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+     <div class="cv-sidebar" data-aos="fade-right">
+      <h5 data-aos="fade-up" data-aos-delay="100">CONTACT</h5>
+      <ul>
+       <li data-aos="fade-up" data-aos-delay="150"><i class="fas fa-phone"></i> 01735-944765</li>
+       <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-envelope"></i> amazim305@gmail.com</li>
+       <li data-aos="fade-up" data-aos-delay="250"><i class="fas fa-map-marker-alt"></i> House#70/A, Road#5, Panthopath, Dhaka-1205</li>
+       <li data-aos="fade-up" data-aos-delay="300"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/md-azim-mahabub-590bb9252" target="_blank">LinkedIn</a></li>
+       <li data-aos="fade-up" data-aos-delay="350"><i class="fab fa-github"></i> <a href="https://github.com/amazim305" target="_blank">GitHub</a></li>
+       <li data-aos="fade-up" data-aos-delay="400"><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/channel/UCPw7FciacGGhqudfcTUjQJw" target="_blank">YouTube</a></li>
+      </ul>
+      <h5 class="mt-4" data-aos="fade-up" data-aos-delay="450">SKILLS</h5>
+      <ul>
+       <li data-aos="fade-up" data-aos-delay="500">HTML5 <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="95%"></div></div><div class="progress-label">95%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="550">CSS3 <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="90%"></div></div><div class="progress-label">90%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="600">Bootstrap 5 <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="85%"></div></div><div class="progress-label">85%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="650">JavaScript <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="80%"></div></div><div class="progress-label">80%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="700">jQuery <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="75%"></div></div><div class="progress-label">75%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="750">PHP <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="70%"></div></div><div class="progress-label">70%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="800">Basic C <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="65%"></div></div><div class="progress-label">65%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="850">Python <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="85%"></div></div><div class="progress-label">85%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="900">MS SQL <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="70%"></div></div><div class="progress-label">70%</div></div></li>
+       <li data-aos="fade-up" data-aos-delay="950">MS Office <div class="skill-progress"><div class="progress"><div class="progress-bar" data-width="90%"></div></div><div class="progress-label">90%</div></div></li>
+      </ul>
+      <h5 class="mt-4" data-aos="fade-up" data-aos-delay="1000">LANGUAGES</h5>
+      <ul>
+       <li data-aos="fade-up" data-aos-delay="1050">Good English Skills</li>
+       <li data-aos="fade-up" data-aos-delay="1100">Native Bangla</li>
+      </ul>
+      <h5 class="mt-4" data-aos="fade-up" data-aos-delay="1150">REFERENCE</h5>
+      <p class="small" data-aos="fade-up" data-aos-delay="1200" style="color: var(--text);">
+       <strong>Md. Aliul Islam</strong><br>
+       Instructor (IDB-BISEW)<br>
+       PeopleNTech Institute of IT<br>
+       Mobile: 01518-317509<br>
+       Email: aliul1990@gmail.com
+      </p>
+     </div>
+    </div>
+    <!-- Main Content -->
+    <div class="col-lg-8">
+     <div class="cv-main">
+      <h3 data-aos="fade-left" data-aos-delay="100">PROFILE</h3>
+      <p data-aos="fade-up" data-aos-delay="200">
+       I am a dedicated educator with over a year of experience teaching Web Design, Basic Computer Skills, and Python Programming. Passionate about delivering quality education, I aim to enhance my expertise in Django and PHP to better guide students in mastering modern web technologies and achieving success in the digital world.
+      </p>
+      <h3 class="mt-5" data-aos="fade-left" data-aos-delay="300">WORK EXPERIENCE</h3>
+      <div class="exp-item" data-aos="fade-up" data-aos-delay="400">
+       <div class="exp-title">Zoom Computer & ICT Training Institute</div>
+       <div class="exp-date">21 March 2024 - Present | Instructor</div>
+       <ul>
+        <li>Computer Fundamentals & Advanced Excel</li>
+        <li>Programming in HTML5 with JavaScript, CSS3, and jQuery</li>
+        <li>Core Python Programming</li>
+        <li>C Programming (HSC Level)</li>
+       </ul>
+      </div>
+      <div class="exp-item" data-aos="fade-up" data-aos-delay="500">
+       <div class="exp-title">TeraSoft IT Institute</div>
+       <div class="exp-date">10 Feb 2023 - Present | Remote Instructor</div>
+       <ul>
+        <li>Currently conducting online lessons on Basic Python and Web Design</li>
+        <li>Delivering interactive lessons and providing real-time support to students</li>
+        <li>Guiding students to enhance their skills with hands-on practice and real-world applications</li>
+       </ul>
+      </div>
+      <div class="exp-item" data-aos="fade-up" data-aos-delay="600">
+       <div class="exp-title">IBCS-PRIMAX Software - Bangladesh Ltd.</div>
+       <div class="exp-date">14 Sep 2023 - 15 Nov 2023 | Instructor</div>
+       <ul>
+        <li>ICT in Education Literacy Troubleshooting & Maintenance</li>
+        <li>ICT DIVISION Project Instructor</li>
+       </ul>
+      </div>
+      <h3 class="mt-5" data-aos="fade-left" data-aos-delay="700">EDUCATION</h3>
+      <div class="exp-item" data-aos="fade-up" data-aos-delay="800">
+       <div class="exp-title">Diploma in Computer Technology</div>
+       <div class="exp-date">Patuakhali Polytechnic Institute, Patuakhali | 2018-2022</div>
+       <p><strong>GPA: 3.34 / 4.0</strong></p>
+      </div>
+      <div class="exp-item" data-aos="fade-up" data-aos-delay="900">
+       <div class="exp-title">Secondary School Certificate</div>
+       <div class="exp-date">Babuganj Govt. pilot Secondary School | 2018</div>
+       <p><strong>GPA: 4.72 / 5.0</strong></p>
+      </div>
+      <h3 class="mt-5" id="projects" data-aos="fade-left" data-aos-delay="1000">PROJECTS</h3>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1100">
+       <div class="project-title">Digital Clock</div>
+       <div class="project-desc">A responsive digital clock interface built with modern CSS animations for real-time display.</div>
+       <div class="project-links">
+        <a href="https://amazim305.github.io/Digital-Clock/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amazim305/Digital-Clock" target="_blank">GitHub</a>
+       </div>
+       <small>Tech: CSS, HTML</small>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1150">
+       <div class="project-title">Hospital Management</div>
+       <div class="project-desc">A simple web-based hospital management system for tracking patient records and appointments.</div>
+       <div class="project-links">
+        <a href="https://amazim305.github.io/HospitalManagement/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amazim305/HospitalManagement" target="_blank">GitHub</a>
+       </div>
+       <small>Tech: HTML, CSS</small>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1200">
+       <div class="project-title">Coffee Shop</div>
+       <div class="project-desc">An interactive coffee shop landing page with menu showcase and responsive design.</div>
+       <div class="project-links">
+        <a href="https://amazim305.github.io/COFFE-SHOP/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amazim305/COFFE-SHOP" target="_blank">GitHub</a>
+       </div>
+       <small>Tech: HTML, CSS</small>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1250">
+       <div class="project-title">Wall Clock</div>
+       <div class="project-desc">A custom analog wall clock simulation using CSS for smooth hand movements.</div>
+       <div class="project-links">
+        <a href="https://github.com/amazim305/wall-clock" target="_blank">GitHub</a>
+       </div>
+       <small>Tech: CSS</small>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1300">
+       <div class="project-title">Calculator</div>
+       <div class="project-desc">A basic calculator app with essential operations, styled for mobile usability.</div>
+       <div class="project-links">
+        <a href="https://github.com/amazim305/calculator" target="_blank">GitHub</a>
+       </div>
+       <small>Tech: CSS, HTML</small>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="1350">
+       <div class="project-title">Medical Project</div>
+       <div class="project-desc">An ongoing medical-related web project for data management and visualization.</div>
+       <div class="project-links">
+        <a href="https://github.com/amazim305/MedicalProject" target="_blank">GitHub</a>
+       </div>
+       <small>Tech: HTML, CSS</small>
+      </div>
+      <!-- LinkedIn Videos Section -->
+      <h3 class="mt-5" id="videos" data-aos="fade-left" data-aos-delay="1400">LINKEDIN VIDEOS</h3>
+      <div class="video-item" data-aos="fade-up" data-aos-delay="1450">
+       <div class="video-title">Featured Videos from LinkedIn</div>
+       <div class="video-desc">Explore my educational videos on web development, Python programming, and IT skills shared on LinkedIn. These videos showcase teaching sessions, tips, and tutorials.</div>
+       <div class="video-links">
+        <a href="https://www.linkedin.com/in/md-azim-mahabub-590bb9252/posts/" target="_blank">View All Videos on LinkedIn</a>
+       </div>
+       <small>Platform: LinkedIn</small>
+      </div>
+      <!-- YouTube Channel Section -->
+      <h3 class="mt-5" id="youtube" data-aos="fade-left" data-aos-delay="1500">YOUTUBE CHANNEL</h3>
+      <div class="youtube-item" data-aos="fade-up" data-aos-delay="1550">
+       <div class="youtube-title">Online IT Institute</div>
+       <div class="youtube-desc">Discover tutorials, lectures, and IT training videos on my YouTube channel dedicated to online IT education, web development, Python, and more. Subscribe for updates on new content!</div>
+       <div class="youtube-links">
+        <a href="https://www.youtube.com/channel/UCPw7FciacGGhqudfcTUjQJw" target="_blank">Visit Channel</a>
+        <a href="https://www.youtube.com/channel/UCPw7FciacGGhqudfcTUjQJw/videos" target="_blank">Watch Videos</a>
+       </div>
+       <small>Platform: YouTube | Subscribers: [Update Number] | Videos: [Update Number]</small>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ </section>
+ <!-- Certifications -->
+ <section id="certs" class="py-5 bg-light">
+  <div class="container">
+   <h2 class="text-center mb-5" style="color: var(--secondary);" data-aos="fade-up">NSDA CERTIFICATION</h2>
+   <div class="row g-4">
+    <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
+     <img src="https://i.ibb.co/8XvJ7nK/cert1.jpg" alt="NSDA Certificate for IT Support Service Level-3, Serial NSC-ICT-ITSS-L3-002674" class="cert-img img-fluid" data-bs-toggle="modal" data-bs-target="#cert1" onerror="this.src='https://via.placeholder.com/300x400?text=Cert+1'">
+     <p class="mt-2"><strong>IT Support Service, Level-3</strong><br>Serial: NSC-ICT-ITSS-L3-002674</p>
+    </div>
+    <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+     <img src="https://i.ibb.co/4pK7n7M/cert2.jpg" alt="NSDA Certificate for Web Design for Freelancing Level-3, Serial NSC-ICT-WDDF-L3-001754" class="cert-img img-fluid" data-bs-toggle="modal" data-bs-target="#cert2" onerror="this.src='https://via.placeholder.com/300x400?text=Cert+2'">
+     <p class="mt-2"><strong>Web Design for Freelancing, Level-3</strong><br>Serial: NSC-ICT-WDDF-L3-001754</p>
+    </div>
+    <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
+     <img src="https://i.ibb.co/kFtMvhh/Certificate-Md-Azim-Mahabub-4.jpg" alt="NSDA New Certification 1 for Md. Azim Mahabub" class="cert-img img-fluid" data-bs-toggle="modal" data-bs-target="#cert3" onerror="this.src='https://via.placeholder.com/300x400?text=Cert+3'">
+     <p class="mt-2"><strong>New Certification 1</strong><br>Serial: [Add Serial if Available]</p>
+    </div>
+    <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
+     <img src="https://i.ibb.co/PsDhJ1Fw/Certificate-MD-Azim-Mahabub-2.jpg" alt="NSDA New Certification 2 for Md. Azim Mahabub" class="cert-img img-fluid" data-bs-toggle="modal" data-bs-target="#cert4" onerror="this.src='https://via.placeholder.com/300x400?text=Cert+4'">
+     <p class="mt-2"><strong>New Certification 2</strong><br>Serial: [Add Serial if Available]</p>
+    </div>
+   </div>
+  </div>
+ </section>
+ <!-- Contact -->
+ <section id="contact" class="py-5 text-center">
+  <div class="container">
+   <h3 style="color: var(--secondary);" data-aos="fade-up">GET IN TOUCH</h3>
+   <p class="lead" data-aos="fade-up" data-aos-delay="100">Feel free to reach out for collaborations or opportunities!</p>
+   <a href="https://wa.me/8801735944765" class="btn btn-success btn-lg" data-aos="fade-up" data-aos-delay="200">Chat on WhatsApp</a>
+  </div>
+ </section>
+ <!-- WhatsApp Button -->
+ <a href="https://wa.me/8801735944765?text=Hi%20Azim!%20I%20saw%20your%20portfolio." class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+ </a>
+ <!-- Footer -->
+ <footer class="text-center">
+  <p>&copy; 2025 Md. Azim Mahabub. All Rights Reserved.</p>
+ </footer>
+ <!-- Modals -->
+ <div class="modal fade" id="cert1">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+   <div class="modal-content">
+    <div class="modal-body p-0">
+     <img src="https://i.ibb.co/8XvJ7nK/cert1.jpg" class="img-fluid" alt="Full NSDA Certificate for IT Support Service Level-3">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="modal fade" id="cert2">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+   <div class="modal-content">
+    <div class="modal-body p-0">
+     <img src="https://i.ibb.co/4pK7n7M/cert2.jpg" class="img-fluid" alt="Full NSDA Certificate for Web Design for Freelancing Level-3">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="modal fade" id="cert3">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+   <div class="modal-content">
+    <div class="modal-body p-0">
+     <img src="https://i.ibb.co/kFtMvhh/Certificate-Md-Azim-Mahabub-4.jpg" class="img-fluid" alt="Full New Certification 1 for Md. Azim Mahabub">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="modal fade" id="cert4">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+   <div class="modal-content">
+    <div class="modal-body p-0">
+     <img src="https://i.ibb.co/PsDhJ1Fw/Certificate-MD-Azim-Mahabub-2.jpg" class="img-fluid" alt="Full New Certification 2 for Md. Azim Mahabub">
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- Scripts -->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+ <script>
+ // Initialize AOS with mobile disable
+ AOS.init({
+   once: true,
+   duration: 800,
+   easing: 'ease-out-quart',
+   disable: 'mobile' // Disable animations on mobile for better performance
+ });
+
+ // Theme Toggle with error handling
+ try {
+   $('#themeToggle').click(function() {
+     const body = $('body');
+     const icon = $(this).find('i');
+     if (body.attr('data-theme') === 'light') {
+       body.attr('data-theme', 'dark');
+       icon.removeClass('fa-moon').addClass('fa-sun');
+       localStorage.setItem('theme', 'dark');
+     } else {
+       body.attr('data-theme', 'light');
+       icon.removeClass('fa-sun').addClass('fa-moon');
+       localStorage.setItem('theme', 'light');
+     }
+   });
+   // Load saved theme
+   if (localStorage.getItem('theme') === 'dark') {
+     $('body').attr('data-theme', 'dark');
+     $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
+   }
+ } catch (e) {
+   console.warn('Theme toggle error:', e);
+ }
+
+ // Smooth Scroll with adjusted offset
+ $('a[href^="#"]').click(function(e) {
+   if (this.hash && this.pathname === location.pathname) {
+     e.preventDefault();
+     const target = $(this.hash);
+     if (target.length) {
+       $('html, body').animate({
+         scrollTop: target.offset().top - 100 // Adjusted for navbar
+       }, 900, 'easeInOutQuad');
+     }
+   }
+ });
+
+ // Back to Top Button
+ $(window).scroll(function() {
+   if ($(this).scrollTop() > 300) {
+     $('#backToTop').addClass('show');
+   } else {
+     $('#backToTop').removeClass('show');
+   }
+ });
+ $('#backToTop').click(function(e) {
+   e.preventDefault();
+   $('html, body').animate({ scrollTop: 0 }, 800, 'easeInOutQuad');
+ });
+
+ // Animate Skill Progress Bars on scroll
+ function animateSkills() {
+   $('.progress-bar').each(function() {
+     if ($(this).hasClass('animated')) return;
+     const width = $(this).data('width');
+     $(this).css('width', width);
+     $(this).addClass('animated');
+   });
+ }
+ $(window).scroll(animateSkills);
+ // Trigger on load
+ setTimeout(animateSkills, 1000);
+
+ // PDF Download - Simplified version without images to avoid CORS
+ document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+   const loading = document.getElementById('pdfLoading');
+   loading.style.display = 'block';
+   setTimeout(() => {
+     try {
+       const { jsPDF } = window.jspdf;
+       const doc = new jsPDF('p', 'mm', 'a4');
+       let y = 15;
+
+       // Header background
+       doc.setFillColor(0, 51, 102);
+       doc.rect(0, 0, 210, 50, 'F');
+       doc.setTextColor(255, 255, 255);
+
+       // Title
+       doc.setFontSize(18);
+       doc.setFont('helvetica', 'bold');
+       doc.text('Resume of Md. Azim Mahabub', 105, 20, { align: 'center' });
+
+       y = 55;
+
+       // Subtitle
+       doc.setTextColor(0, 170, 255);
+       doc.setFontSize(11);
+       doc.setFont('helvetica', 'bold');
+       doc.text('Web Instructor | Python Programmer | IT Support Specialist', 105, y, { align: 'center' });
+       y += 15;
+
+       // Section function
+       function addSection(title, contentArray, startY) {
+         let currentY = startY;
+         if (currentY > 270) {
+           doc.addPage();
+           currentY = 20;
+         }
+         // Section header
+         doc.setTextColor(0, 51, 102);
+         doc.setFontSize(14);
+         doc.setFont('helvetica', 'bold');
+         doc.text(title, 20, currentY);
+         // Underline
+         doc.setDrawColor(0, 170, 255);
+         doc.setLineWidth(0.5);
+         doc.line(20, currentY + 2, 190, currentY + 2);
+         currentY += 10;
+         // Content
+         doc.setTextColor(0, 0, 0);
+         doc.setFontSize(10);
+         doc.setFont('helvetica', 'normal');
+         contentArray.forEach(item => {
+           if (currentY > 270) {
+             doc.addPage();
+             currentY = 20;
+           }
+           const splitText = doc.splitTextToSize(item, 170);
+           doc.text(splitText, 20, currentY);
+           currentY += splitText.length * 4 + 2;
+         });
+         return currentY + 5;
+       }
+
+       // Profile
+       const profileSplit = [
+         'I am a dedicated educator with over a year of experience teaching Web Design, Basic Computer Skills, and Python Programming.',
+         'Passionate about delivering quality education, I aim to enhance my expertise in Django and PHP to better guide students in mastering modern web technologies and achieving success in the digital world.'
+       ];
+       y = addSection('PROFILE', profileSplit, y);
+
+       // Work Experience
+       const workContent = [
+         'Zoom Computer & ICT Training Institute | 21 March 2024 - Present | Instructor',
+         '• Computer Fundamentals & Advanced Excel',
+         '• Programming in HTML5 with JavaScript, CSS3, and jQuery',
+         '• Core Python Programming',
+         '• C Programming (HSC Level)',
+         '',
+         'TeraSoft IT Institute | 10 Feb 2023 - Present | Remote Instructor',
+         '• Currently conducting online lessons on Basic Python and Web Design',
+         '• Delivering interactive lessons and providing real-time support to students',
+         '• Guiding students to enhance their skills with hands-on practice and real-world applications',
+         '',
+         'IBCS-PRIMAX Software - Bangladesh Ltd. | 14 Sep 2023 - 15 Nov 2023 | Instructor',
+         '• ICT in Education Literacy Troubleshooting & Maintenance',
+         '• ICT DIVISION Project Instructor'
+       ];
+       y = addSection('WORK EXPERIENCE', workContent, y);
+
+       // Education
+       const eduContent = [
+         'Diploma in Computer Technology',
+         'Patuakhali Polytechnic Institute, Patuakhali | 2018-2022',
+         'GPA: 3.34 / 4.0',
+         '',
+         'Secondary School Certificate',
+         'Babuganj Govt. pilot Secondary School | 2018',
+         'GPA: 4.72 / 5.0'
+       ];
+       y = addSection('EDUCATION', eduContent, y);
+
+       // Projects
+       const projContent = [
+         'Digital Clock: Responsive digital clock with CSS animations. Tech: CSS, HTML',
+         'Hospital Management: Web-based system for patient tracking. Tech: HTML, CSS',
+         'Coffee Shop: Interactive landing page with menu. Tech: HTML, CSS',
+         'Wall Clock: Analog clock simulation with CSS. Tech: CSS',
+         'Calculator: Basic operations app for mobile. Tech: CSS, HTML',
+         'Medical Project: Data management for medical visualization. Tech: HTML, CSS'
+       ];
+       y = addSection('PROJECTS', projContent, y);
+
+       // LinkedIn Videos
+       const linkedinContent = [
+         'Featured Videos from LinkedIn',
+         'Explore educational videos on web development, Python, and IT skills.',
+         'View All: https://www.linkedin.com/in/md-azim-mahabub-590bb9252/posts/'
+       ];
+       y = addSection('LINKEDIN VIDEOS', linkedinContent, y);
+
+       // YouTube Channel
+       const youtubeContent = [
+         'Online IT Institute',
+         'Tutorials, lectures, and IT training videos on web development, Python, and more.',
+         'Channel: https://www.youtube.com/channel/UCPw7FciacGGhqudfcTUjQJw'
+       ];
+       y = addSection('YOUTUBE CHANNEL', youtubeContent, y);
+
+       // Contact
+       const contactContent = [
+         'Phone: 01735-944765',
+         'Email: amazim305@gmail.com',
+         'Address: House#70/A, Road#5, Panthopath, Dhaka-1205',
+         'LinkedIn: https://www.linkedin.com/in/md-azim-mahabub-590bb9252',
+         'GitHub: https://github.com/amazim305',
+         'YouTube: https://www.youtube.com/channel/UCPw7FciacGGhqudfcTUjQJw'
+       ];
+       y = addSection('CONTACT', contactContent, y);
+
+       // Skills
+       const skillsContent = ['HTML5, CSS3, Bootstrap 5, JavaScript, jQuery, PHP, Basic C, Python, MS SQL, MS Office'];
+       y = addSection('SKILLS', skillsContent, y);
+
+       // Languages
+       const langsContent = ['Good English Skills', 'Native Bangla'];
+       y = addSection('LANGUAGES', langsContent, y);
+
+       // Reference
+       const refContent = [
+         'Md. Aliul Islam',
+         'Instructor (IDB-BISEW)',
+         'PeopleNTech Institute of IT',
+         'Mobile: 01518-317509',
+         'Email: aliul1990@gmail.com'
+       ];
+       y = addSection('REFERENCE', refContent, y);
+
+       // Certifications
+       const certContent = [
+         'IT Support Service, Level-3',
+         'Serial: NSC-ICT-ITSS-L3-002674',
+         '',
+         'Web Design for Freelancing, Level-3',
+         'Serial: NSC-ICT-WDDF-L3-001754',
+         '',
+         'New Certification 1',
+         'Serial: [Add Serial if Available]',
+         '',
+         'New Certification 2',
+         'Serial: [Add Serial if Available]'
+       ];
+       addSection('NSDA CERTIFICATION', certContent, y);
+
+       // Footer
+       doc.setTextColor(128, 128, 128);
+       doc.setFontSize(8);
+       doc.setFont('helvetica', 'italic');
+       doc.text('© 2025 Md. Azim Mahabub. All Rights Reserved.', 105, 290, { align: 'center' });
+
+       doc.save('MD AZIM MAHABUB CV Resume.pdf');
+     } catch (pdfErr) {
+       console.error('PDF generation failed:', pdfErr);
+       alert('PDF generation failed. Please try again or check console for details.');
+     } finally {
+       loading.style.display = 'none';
+     }
+   }, 500);
+ });
+ </script>
+</body>
+</html>
